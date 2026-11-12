@@ -14,7 +14,7 @@ env:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     defaults:
       run:
         working-directory: starter/backend
@@ -37,7 +37,7 @@ jobs:
         run: pipenv run lint
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     defaults:
       run:
         working-directory: starter/backend
@@ -60,7 +60,7 @@ jobs:
         run: pipenv run test
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs:
       - lint
       - test
