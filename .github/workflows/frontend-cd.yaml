@@ -96,6 +96,9 @@ jobs:
             --name cluster \
             --region ${{ env.AWS_REGION }}
 
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v2
+
       - name: Deploy to EKS
         working-directory: starter/frontend/k8s
         run: |
